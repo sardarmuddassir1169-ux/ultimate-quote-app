@@ -1,38 +1,32 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">  
-    <title>Quote Generator | Professional</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font Awesome Link for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>Quote of the Day</header>
-      <div class="content">
-        <div class="quote-area">
-          <i class="fas fa-quote-left"></i>
-          <p class="quote">Never give up, for that is just the place and time that the tide will turn.</p>
-          <i class="fas fa-quote-right"></i>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<div class="container">
+    <header>Business Automation Portal</header>
+    
+    <form id="quoteForm">
+        <input type="text" id="custName" placeholder="Customer Name" required>
+        <input type="tel" id="custPhone" placeholder="Phone Number" required>
+        
+        <div class="row">
+            <input type="number" id="L" placeholder="Length (ft)" required>
+            <input type="number" id="W" placeholder="Width (ft)" required>
         </div>
-        <div class="author">
-          <span>__</span>
-          <span class="name">Harriet Beecher Stowe</span>
-        </div>
-      </div>
-      <div class="buttons">
-        <div class="features">
-          <ul>
-            <li class="speech"><i class="fas fa-volume-up"></i></li>
-            <li class="copy"><i class="fas fa-copy"></i></li>
-            <li class="twitter"><i class="fab fa-twitter"></i></li>
-          </ul>
-          <button>New Quote</button>
-        </div>
-      </div>
+
+        <button type="submit" id="calc-btn">Calculate & Save Data</button>
+    </form>
+
+    <div id="resultArea" style="display:none; margin-top: 20px; text-align: center;">
+        <h3 id="displayPrice"></h3>
+        
+        <!-- Button 1: PDF -->
+        <button id="download-pdf" style="background: #34a853; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 10px;">
+           <i class="fas fa-file-pdf"></i> Download Official PDF
+        </button>
+
+        <!-- Button 2: WhatsApp -->
+        <button id="whatsapp-btn" style="background: #25d366; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 10px;">
+           <i class="fab fa-whatsapp"></i> Send Quote to WhatsApp
+        </button>
     </div>
-    <script src="script.js"></script>
-  </body>
-</html>
+</div>
